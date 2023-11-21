@@ -29,7 +29,7 @@ class ID3 {
 
     writeID3() {
         return new Promise((resolve, reject) => {
-            nodeID3.write(this.generateTags(), this.music_dir, function (err) {
+            nodeID3.update(this.generateTags(), this.music_dir, function (err) {
                 if (err) reject(err);
                 else resolve();
             });
